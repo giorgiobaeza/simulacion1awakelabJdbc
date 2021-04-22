@@ -34,13 +34,15 @@ public class ConsultasControlador {
 	@RequestMapping(value="/Reservas", method=RequestMethod.POST)
 	public String procesarReserva(Model model, @RequestParam int idEspecialidad) {
 		List<Agendas> listaagendas = ad.obtenerAgendas(idEspecialidad);
-		model.addAttribute("lag", listaagendas);
 		List<Agendas> lagenda = ad.obtenerAgendaInicio();
 		List<Especialidades> listaesp = ed.obtenerEspecialidades();
 		if(idEspecialidad==0) {
+			model.addAttribute("lesp",listaesp);
 			model.addAttribute("lag",lagenda);
+			return "reservas";
 		}
 		model.addAttribute("lesp",listaesp);
+		model.addAttribute("lag", listaagendas);
 
 		return "reservas";
 		

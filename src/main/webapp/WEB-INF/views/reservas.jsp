@@ -26,7 +26,7 @@
 				<p>
 					Especialidad: <select name="idEspecialidad"
 						id="idEspecialidad">
-						<option value="">Seleccione una opción</option>
+						<option value="0">Seleccione una opción</option>
 						<c:forEach items="${lesp}" var="esp">
 							<option value='<c:out value="${esp.getIdespecialidad()}"/>'><c:out
 									value="${esp.getDescripcion()}" /></option>
