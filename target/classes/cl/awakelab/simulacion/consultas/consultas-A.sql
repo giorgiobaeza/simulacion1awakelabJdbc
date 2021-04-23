@@ -1,3 +1,5 @@
-select apellido, nombre, rutdoctor from doctores where idespecialidad = 6;
+select d.apellido, d.nombre, d.rutdoctor from doctores d
+LEFT JOIN especialidades e ON e.idespecialidad = d.idespecialidad 
+WHERE e.descripcion = 'Cardiología'
+ORDER BY d.apellido, d.nombre;
 
-select nombre, apellido, rutdoctor from doctores where idespecialidad = 6;

@@ -61,20 +61,20 @@ INSERT INTO pacientes (idpaciente,rutPaciente,nombre,apellido) VALUES (21,'71488
 INSERT INTO pacientes (idpaciente,rutPaciente,nombre,apellido) VALUES (31,'10748295-7','Quinn','Shelton');
 INSERT INTO pacientes (idpaciente,rutPaciente,nombre,apellido) VALUES (41,'03528514-0','Arthur','Sanders');
 
-INSERT INTO especialidades (idespecialidad, descripcion) values (1, 'ProctologÃ­a');
-INSERT INTO especialidades (idespecialidad, descripcion) values (2, 'GastroenterologÃ­a');
-INSERT INTO especialidades (idespecialidad, descripcion) values (3, 'GinecologÃ­a');
-INSERT INTO especialidades (idespecialidad, descripcion) values (4, 'NeurologÃ­a');
-INSERT INTO especialidades (idespecialidad, descripcion) values (5, 'TraumatologÃ­a');
-INSERT INTO especialidades (idespecialidad, descripcion) values (6, 'CardiologÃ­a');
-INSERT INTO especialidades (idespecialidad, descripcion) values (7, 'PsiquiatrÃ­a');
+INSERT INTO especialidades (idespecialidad, descripcion) values (1, 'Proctología');
+INSERT INTO especialidades (idespecialidad, descripcion) values (2, 'Gastroenterología');
+INSERT INTO especialidades (idespecialidad, descripcion) values (3, 'Ginecología');
+INSERT INTO especialidades (idespecialidad, descripcion) values (4, 'Neurología');
+INSERT INTO especialidades (idespecialidad, descripcion) values (5, 'Traumatología');
+INSERT INTO especialidades (idespecialidad, descripcion) values (6, 'Cardiología');
+INSERT INTO especialidades (idespecialidad, descripcion) values (7, 'Psiquiatría');
 
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (1,'88043333-8','Emerson','Lucas',6);
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (11,'75287688-3','Chanda','Sanford',7);
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (21,'91861215-8','Peter','Hale',4);
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (31,'79410617-6','Tamekah','Bond',3);
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (41,'78920002-5','Juan','Manogrande',1);
-INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (51,'92757073-0','Rebeca','GÃ¼atuzi',1);
+INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (51,'92757073-0','Rebeca','Güatuzi',1);
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (61,'91223342-7','Galvin','Lee',5);
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (71,'07017187-1','Jamal','Hinton',7);
 INSERT INTO doctores (iddoctor,rutdoctor,nombre,apellido,idespecialidad) VALUES (81,'80724757-8','Josefa','Amasabubis',2);
