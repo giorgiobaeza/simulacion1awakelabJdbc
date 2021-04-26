@@ -35,7 +35,6 @@ public class DemoConsola {
 			if(latenciones.get(i).getClass().getSimpleName().equals("AtencionRegular")) {
 				contartiempo += latenciones.get(i).calcularTiempo();
 				String especialidad = "";
-				System.out.println(((AtencionRegular) latenciones.get(i)).getIdEspecialidad());
 				switch(((AtencionRegular) latenciones.get(i)).getIdEspecialidad()) {
 					case 1: especialidad = "Proctología";
 					break;
@@ -58,7 +57,6 @@ public class DemoConsola {
 			else {
 				count1 += 1;
 				String severidad = "";
-				System.out.println(((AtencionUrgencia) latenciones.get(i)).getSeveridad());
 
 				contartiempo += latenciones.get(i).calcularTiempo();
 				switch(((AtencionUrgencia) latenciones.get(i)).getSeveridad()) {
