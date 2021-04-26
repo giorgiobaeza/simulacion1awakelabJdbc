@@ -35,20 +35,21 @@ public class DemoConsola {
 			if(latenciones.get(i).getClass().getSimpleName().equals("AtencionRegular")) {
 				contartiempo += latenciones.get(i).calcularTiempo();
 				String especialidad = "";
-				if(latenciones.get(i).toString().contains("idEspecialidad=1")) {
-					especialidad = "Proctología";
-				}else if(latenciones.get(i).toString().contains("idEspecialidad=2")) {
-					especialidad = "Gastroenterología";
-				}else if(latenciones.get(i).toString().contains("idEspecialidad=3")) {
-					especialidad = "Ginecología";
-				}else if(latenciones.get(i).toString().contains("idEspecialidad=4")) {
-					especialidad = "Neurología";
-				}else if(latenciones.get(i).toString().contains("idEspecialidad=5")) {
-					especialidad = "Traumatología";
-				}else if(latenciones.get(i).toString().contains("idEspecialidad=6")) {
-					especialidad = "Cardiología";
-				}else if(latenciones.get(i).toString().contains("idEspecialidad=7")) {
-					especialidad = "Psiquiatría";
+				System.out.println(((AtencionRegular) latenciones.get(i)).getIdEspecialidad());
+				switch(((AtencionRegular) latenciones.get(i)).getIdEspecialidad()) {
+					case 1: especialidad = "Proctología";
+					break;
+					case 2: especialidad = "Gastroenterología";
+					break;
+					case 3: especialidad = "Ginecología";
+					break;
+					case 4: especialidad = "Neurología";
+					break;
+					case 5: especialidad = "Traumatología";
+					break;
+					case 6: especialidad = "Cardiología";
+					break;
+					case 7: especialidad = "Psiquiatría";
 				}
 				
 				System.out.println("Atención Regular " + (1+i) + ": " + especialidad + ", tiempo total " + latenciones.get(i).calcularTiempo() + " minutos");
@@ -57,19 +58,18 @@ public class DemoConsola {
 			else {
 				count1 += 1;
 				String severidad = "";
+				System.out.println(((AtencionUrgencia) latenciones.get(i)).getSeveridad());
+
 				contartiempo += latenciones.get(i).calcularTiempo();
-				if(latenciones.get(i).toString().contains("severidad=1")) {
-					severidad = "severidad tipo 1 (normal)";
-				}else if(latenciones.get(i).toString().contains("severidad=2")) {
-					severidad = "severidad tipo 2 (grave)";
-				}else if(latenciones.get(i).toString().contains("severidad=3")) {
-					severidad = "severidad tipo 3 (muy grave)";
+				switch(((AtencionUrgencia) latenciones.get(i)).getSeveridad()) {
+				case 1: severidad = "severidad tipo 1 (normal)";
+				break;
+				case 2: severidad = "severidad tipo 2 (grave)";
+				break;
+				case 3: severidad = "severidad tipo 3 (muy grave)";
 				}
-				String cadena = latenciones.get(i).toString();
-				String[] partes = cadena.split("=");
-				String[] te = partes[1].split(",");
-				int tiempoespera = Integer.parseInt(te[0]);
-				System.out.println("Atención de Urgencia " + count1 + ": Espera de " + tiempoespera + " minutos, " + severidad + ", tiempo total "+ latenciones.get(i).calcularTiempo()  +" minutos");
+				
+				System.out.println("Atención de Urgencia " + count1 + ": Espera de " + ((AtencionUrgencia) latenciones.get(i)).getTiempoEspera() + " minutos, " + severidad + ", tiempo total "+ latenciones.get(i).calcularTiempo()  +" minutos");
 				System.out.println();
 			}
 			
